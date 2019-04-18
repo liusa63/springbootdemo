@@ -2,8 +2,29 @@ spring:
   data:
     mongodb:
       host: 127.0.0.1
-      port: 12345
+      port: 24011
      #username: 
      #password: 
       database: test
      #uri: mongodb://user:secret@mongo1.example.com:12345,mongo2.example.com:23456/test
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: auto # 自动应答
+        concurrency: 5 # 消费端最小并发数
+        max-concurrency: 10 # 消费端最大并发数
+  redis:
+    database: 15
+    host: 127.0.0.1
+    port: 6379
+    password: 
+    pool:
+      max-active: 8  # 连接池最大连接数（使用负值表示没有限制）
+      max-wait: 1    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-idle: 8    # 连接池中的最大空闲连接
+      min-idle: 0    # 连接池中的最小空闲连接
+    timeout: 1000
