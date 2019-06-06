@@ -22,6 +22,11 @@ public class MongoTestUser {
 	
 	@Field("create_time")
 	private Date createTime;
+	
+	@Field("friends")
+	private List<Friend> friends;
+	
+	
 
 	public String getId() {
 		return id;
@@ -62,13 +67,23 @@ public class MongoTestUser {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
+	
+	
+
+	public List<Friend> getFriends() {
+		return friends;
+	}
+
+	public void setFriends(List<Friend> friends) {
+		this.friends = friends;
+	}
 
 	@Override
 	public String toString() {
 		return "MongoTesUser [id=" + id + ", name=" + name + ", age=" + age + ", tags=" + tags + ", createTime="
 				+ createTime + "]";
 	}
-
+	
 	
 
 }
