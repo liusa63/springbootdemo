@@ -71,7 +71,28 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
         </dependency>
+        
+        
+        <!-- Excel  -->
+        <dependency>
+			  <groupId>org.apache.poi</groupId>
+			  <artifactId>poi</artifactId>
+			  <version>3.17</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<!-- Excel  -->
 
+		<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.51</version>
+        </dependency>
+        
 	</dependencies>
 
 	<build>
