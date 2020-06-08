@@ -35,14 +35,16 @@ spring:
     password: 123456
 
 
-elas.server.hostName=127.0.0.1
-elas.server.port=9200
-elas.cluster.name=log
-elas.server.esusername=elastic
-elas.server.espassword=123456
-
-elas.server.connectTimeout=5000
-elas.server.cocketTimeout=40000
-elas.server.connectionRequestTimeout=6000
-
-elas.server.protocol=http
+elas:
+  server:
+    hostName: 127.0.0.1
+    port: 9200
+    esusername: elastic
+    espassword: 123456
+    connectTimeout: 5000
+    cocketTimeout: 40000
+    connectionRequestTimeout: 6000
+    protocol: http
+  cluster:
+    name: log
+  
